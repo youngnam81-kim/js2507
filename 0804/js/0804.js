@@ -1,3 +1,59 @@
+let nums = [1, 2, 3];
+let chars = ["a", "b", "c", "d"];
+
+// 두 개의 배열 합치기
+let numberChars = nums.concat(chars);
+let charsNums = chars.concat(nums);
+document.write(`num에 char합치면 ${numberChars} , char에 num을 합치면 ${charsNums}`);
+document.write(`<hr>`);
+
+
+// 배열 안의 요소 합치기
+let string1 = nums.join();
+document.write(`구분자 없이 : ${string1}<br>`);
+let string2 = chars.join(`/`);
+document.write(`/ 구분자 지정 : ${string2}<br>`);
+document.write(`<hr>`);
+
+// 요소 추가 - 새로운 length 값 반환
+let push1 = nums.push(4, 5);
+document.write(`length :${push1} | 배열: ${nums} <br>`);
+let push2 = nums.unshift(0);
+document.write(`length :${push2} | 배열: ${nums} <br>`);
+document.write(`<hr>`);
+
+// 요소 추출 - 꺼낸 요소 반환
+
+
+
+let testNum = [1, 4, 6];
+let testStr = ['김', '영', '남'];
+let hi = [" 고객님 안녕하십니까"];
+let openHi1 = testStr.concat(hi);
+document.write(`${openHi1}<br>`);
+
+let openHi2 = openHi1.join(`_`);
+openHi1.push(`!`)
+document.write(`${openHi2}<br>`);
+
+// let openHi3 = openHi1.join(openHi1);
+document.write(`${openHi1}<br>`);
+
+openHi1.unshift("수원역지점");
+document.write(`${openHi1}<br>`);
+
+openHi1.pop();
+document.write(`${openHi1}<br>`);
+
+openHi1.shift();
+document.write(`${openHi1}<br>`);
+
+openHi1.splice(3, 1, ' 고객님 오늘도 좋은하루 안녕하십니까');
+document.write(`${openHi1}<br>`);
+
+let openHi3 = openHi1.slice(0, 3);
+document.write(`${openHi3}<br>`);
+
 function dd(word) {
     alert(word);
 }
