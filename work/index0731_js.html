@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: center; */
+            width: 400px;
+            flex-direction: row;
+        }
+
+        .times {
+            padding: 30;
+            margin: 15px;
+            border: 1px solid #ccc;
+            line-height: 2;
+        }
+
+        .times h3 {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div>로또 번호 생성기</div>
+    <div id="test1"></div>
+    <hr>
+    <div id="screen">상영관</div>
+
+    <div class="container">
+        <script>
+
+            // 로또 생성
+            var result = [];
+            for (let i = 0; i < 6; i++) {
+                result[i] = Math.floor(Math.random() * 45) + 1;
+                if (i != 0) {
+                    for (let j = 0; j < result.length; j++) {
+                        if (result[j - 1] == result[j]) {
+                            i--;
+                        }
+                    }
+                }
+            }
+            document.getElementById("test1").innerHTML = `당첨 번호 : ${result}`;
+            let totalNum;
+            let lineNum;
+            // totalNum = prompt('총몇명?');
+            // lineNum = prompt('라인몇명?');
+            totalNum = 59;
+            lineNum = 6;
+            document.write(`<table border=1px; cellspacing=0; cellspacing=0;>`);
+            document.write(`<tr>`);
+            for (let i = 1; i < totalNum; i++) {
+                document.write(`<td>`);
+                document.write(`좌석${i}`);
+                if (i % lineNum == 0) {
+                    document.write(`</td>`);
+                    document.write(`<tr>`);
+                }
+                document.write(`</td>`);
+            }
+            document.write(`</tr>`);
+            document.write(`<table>`);
+
+            // Do it! CSS를 사용해 구구단 보기 좋게 출력하기
+            for (let i = 2; i <= 9; i++) {
+                document.write(`<div class="times">`);
+                document.write(`<h3>${i}단</h3>`);
+                for (let j = 1; j <= 9; j++) {
+                    document.write(`${i} X ${j} = ${i * j} <br>`);
+                }
+                document.write(`</div>`);
+            }
+        </script>
+    </div>
+</body>
+
+</html>

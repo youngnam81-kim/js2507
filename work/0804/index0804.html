@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 이벤트</title>
+    <style>
+        html{
+            text-align: center;
+        }
+        a:link,
+        a:visited {
+            color: black;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+            width: 500px;
+            margin: 10px auto;
+            padding: 0;
+        }
+
+        li {
+            display: inline-block;
+            width: 120px;
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        #result {
+            width: 500px;
+            height: 300px;
+            margin: 30px auto;
+            border: 2px solid #ccc;
+            border-radius: 15px;
+        }
+
+        p {
+            width: 80%;
+            padding: 10px;
+            line-height: 2em;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>TEST</h2>
+    <!-- Do it! HTML 요소에 이벤트 처리기 연결하기 -->
+    <ul>
+        <li id="list1"><a href="#" onclick="dd('11')">test1</a></li>
+        <li id="list2"><a href="#" onclick="dd('22')">test2</a></li>
+        <li id="list3"><a href="#" onclick="dd('33')">test3</a></li>
+    </ul>
+    <ul>
+
+        <li><a href="#" onclick="button1('btn1');">Green</a></li>
+        <li><a id="btn2" href="#" onclick="changeBg('Orange')">Orange</a></li>
+        <li><a href="#" onclick="changeBg('Purple')">Purple</a></li>
+        <li><a href="#" onclick="qSelectAll()">querySelectAll</a></li>
+        <li><a href="#" onclick="elementTest()">elementTest</a></li>
+
+    </ul>
+    <hr>
+    <div id="result"></div>
+    <p>문단1</p>
+    <p class="intro">문단2</p>
+    <p class="intro">문단3</p>
+    <p class="intro">문단4</p>
+    <p class="intro">문단5</p>
+    <p id="result1">result1</p>
+    <hr>
+    <div>폼안의 모든 요소에 접근하기</div>
+    <form action="#" id="frm1">
+        <label>이름</label><input type="text" name="name2" value="이름111"><br>
+        <label>성</label><input type="text" name="name1" value="성2222"><br>
+        <input type="button" onclick="elementTest()" value="입력"></input>
+    </form>
+    <div id="result2"></div>
+    <hr>
+    <h2>속성 접근하기</h2>
+            <li><a href="#" onclick="imgCg1()">이미지 html dom 속성 접근하기</a></li>
+            <br>
+    <img id="img2" src="https://www.w3schools.com/Jsref/img_pulpit.jpg" alt="이미지">
+    <hr>
+
+    <script>
+        function dd(word) {
+            alert(word);
+        }
+        function button1(btName) {
+            alert(btName);
+        }
+        function changeBg(btName) {
+            //document.getElementById("btn2").style.backgroundColor = "black";
+            //let result = document.querySelector('#result');
+            //result.style.backgroundColor = btName;
+            result.style.backgroundColor = btName;
+        }
+        function qSelectAll() {
+            //const x = document.querySelectorAll("p.intro"); //NodeList (유사 배열) 로 가져온다.
+            const x = document.querySelectorAll("p"); //NodeList (유사 배열) 로 가져온다.
+            const y = document.querySelector(".intro"); //0번째만 가져옴
+            document.getElementById("result1").innerHTML = "--------------------";
+            for (let i = 0; i < x.length; i++) {
+                if (i % 2 == 0) {
+                    x[i].style.backgroundColor = "Purple";
+                } else {
+                    x[i].style.backgroundColor = "Orange";
+                }
+            }
+            /*  
+                        x[0].style.backgroundColor = "red";
+                        x[1].style.backgroundColor = "blue";
+                        */
+            //y.style.backgroundColor = "blue";
+        }
+        function elementTest() {
+            const frm = document.forms["frm1"];
+            let txt = "";
+            alert(frm.length);
+            for (let i = 0; i < frm.length; i++) {
+                txt = txt + frm[i].value;
+            }
+            document.getElementById("result2").innerHTML = "" + txt;
+        }
+        function imgCg1() {
+            if (document.getElementById("img2").src == "https://naverpa-phinf.pstatic.net/MjAyNTAyMTNfMTEg/MDAxNzM5NDMwNjg5MzQ5.5emHiwX3CUmIF5DaGgBk_WbtCMyo2TiKtXwW32zAS5wg.VEVmXiq4bhYh5DBJZi6xPDqSoS2_EBD3CwEJbVgHPfog.JPEG/%EC%9D%B4%EB%8F%9F%7B_gfa_17394306893325526422215461267627.jpg"){
+                document.getElementById("img2").src = "https://www.w3schools.com/Jsref/img_pulpit.jpg";
+            }else{
+                document.getElementById("img2").src = "https://naverpa-phinf.pstatic.net/MjAyNTAyMTNfMTEg/MDAxNzM5NDMwNjg5MzQ5.5emHiwX3CUmIF5DaGgBk_WbtCMyo2TiKtXwW32zAS5wg.VEVmXiq4bhYh5DBJZi6xPDqSoS2_EBD3CwEJbVgHPfog.JPEG/%EC%9D%B4%EB%8F%9F%7B_gfa_17394306893325526422215461267627.jpg"
+            }
+            
+        }
+
+    </script>
+</body>
+
+</html>

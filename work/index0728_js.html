@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="./index0728.css">
+</head>
+
+<body>
+
+    <div>
+        <h2>산술연산자</h2>
+        <p id="result1">+</p>
+        <p id="result2">-</p>
+        <p id="result3">*</p>
+        <p id="result4">/</p>
+        <p id="result5">%</p>
+        <p id="result6">++O</p>
+        <p id="result7">--O</p>
+        <p id="result8">O++</p>
+        <p id="result9">O--</p>
+    </div>
+    <hr>
+    <div>
+        <h2>비교연산자</h2>
+        <p id="result10">==</p>
+        <p id="result11">===</p>
+        <p id="result12">!=</p>
+        <p id="result13">!==</p>
+        <p id="result14">&lt;</p>
+        <p id="result15">&lt;=</p>
+        <p id="result16">&gt;</p>
+        <p id="result17">&gt;=</p>
+
+    </div>
+    <script>
+        var d = document;
+        let num1 = 5;
+        let num2 = 3;
+        let num3 = "3";
+        let cal = "";
+        for (i = 1; i < 18; i++) {
+            result = 0;
+            if (i == 1) {
+                cal = "+";
+                result = num1 + num2;
+            } else if (i == 2) {
+                cal = "-";
+                result = num1 - num2;
+            } else if (i == 3) {
+                cal = "*";
+                result = num1 * num2;
+            } else if (i == 4) {
+                cal = "/";
+                result = num1 / num2;
+            } else if (i == 5) {
+                cal = "%";
+                result = num1 % num2;
+            } else if (i == 6) {
+                cal = "++O";
+                result = ++num1;
+            } else if (i == 7) {
+                cal = "--O";
+                result = --num1;
+            } else if (i == 8) {
+                cal = "O++";
+                result = num1++;
+            } else if (i == 9) {
+                cal = "O--";
+                result = num1--;
+
+            } else if (i == 10) {
+                cal = "==";
+                result = (num2 == num3);
+            } else if (i == 11) {
+                cal = "===";
+                result = (num2 === num3);
+            } else if (i == 12) {
+                cal = "!=";
+                result = (num2 != num3);
+            } else if (i == 13) {
+                cal = "!==";
+                result = (num2 !== num3);
+            } else if (i == 14) {
+                cal = "<";
+                result = (num1 < num2);
+            } else if (i == 15) {
+                cal = "<=";
+                result = (num1 <= num2);
+            } else if (i == 16) {
+                cal = ">";
+                result = (num1 > num2);
+            } else if (i == 17) {
+                cal = ">=";
+                result = (num1 >= num2);
+            }
+            //   d.getElementById("result" + i).innerHTML = result; //result
+            if (i < 10) {
+                d.getElementById("result" + i).innerHTML = `num1은 ${num1} num2는 ${num2}이고 ${cal} 결과는 ${result} 이다.`;
+            } else if (13 <= i) {
+                d.getElementById("result" + i).innerHTML = `num1은 ${num1} num2는 ${num2}이고 ${cal} 결과는 ${result} 이다.`;
+            } else {
+                d.getElementById("result" + i).innerHTML = `num1은 ${num2} num2는 string ${num3}이고 ${cal} 결과는 ${result} 이다.`;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>콘솔에서 결과 </h1>
+    <hr>
+    <h2>Id 확인 </h2>
+    <p><input type="text" id="userId" placeholder="ID를 입력하세요" width="500" value=""> <button type="button"
+            onclick="idCheck()">확인</button></p>
+    <hr>
+    <h2>원 계산</h2>
+    <p id="radiusCal"><input type="text" id="radiusCalval" width="500" value="" readonly> <button type="button"
+            onclick="radiusCal()">확인</button></p>
+    <hr>
+    <script>
+        /*id 채크*/
+        function idCheck() {
+            let userId = document.getElementById('userId').value;
+            console.log(userId);
+
+            if (userId == 'kim') {
+                alert('맞습니다.');
+            } else {
+                alert('힌트는 3글자의 영문 성입니다.');
+                document.getElementById('userId').value = "";
+            }
+        }
+
+        /*넓이 계산*/
+        function radiusCal() {
+            const PI = 3.14;
+            let radius = prompt("반지름을 입력하세요.");
+            let area = PI * radius * radius;
+
+            console.log(area);
+            document.getElementById('radiusCalval').value = area;
+        }
+
+        console.log('----------Number-----------');
+        console.log(Number('1234'));
+        console.log(Number('123.45'));
+        console.log(Number('kim'));
+        console.log(Number('12.kim'));
+        console.log('----------parseInt-----------');
+        console.log(parseInt('1234'));
+        console.log(parseInt('123.45'));
+        console.log('----------parseFloat-----------');
+        console.log(parseFloat('1234'));
+        console.log(parseFloat('123.45'));
+        console.log('----------String-----------');
+        console.log(String('1234'));
+        console.log(String('123.45'));
+        console.log('----------String-----------');
+        console.log(Boolean(0));
+        console.log(Boolean(1));
+        console.log(Boolean(5));
+ 
+    </script>
+</body>
+
+</html>

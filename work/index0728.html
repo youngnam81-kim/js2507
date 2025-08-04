@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1 {
+        height: 200px;
+        text-align: center;
+        align-items: center;
+    }
+
+    #box1 {
+        width: 200px;
+        height: 100px;
+        border: solid #222;
+        margin: 50px auto;
+        background-color: aquamarine;
+        padding: 20px 30px 40px 50px;
+    }
+
+    #box2 {
+        width: 200px;
+        height: 100px;
+        border: solid #222;
+        margin: 50px auto;
+        background-color: rgb(56, 36, 172);
+        padding: 20px 50px;
+    }
+
+    #box3 {
+        width: 200px;
+        height: 100px;
+        border: solid #222;
+        margin: 50px auto;
+        background-color: rgb(185, 6, 156);
+        padding: 20px;
+    }
+
+    #button1 {
+        padding: 10px 20px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+    }
+
+    #button-div-center {
+        width: 200px;
+        margin: 10px auto;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav>ul {
+        list-style: none;
+    }
+
+    nav ul li {
+        width: 100px;
+        height: 40px;
+        display: inline-block;
+        line-height: 40px;
+        text-align: center;
+        margin: 10px;
+        border: 1px solid #222;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    #l-img {
+        float: left;
+        margin-right: 50px;
+        margin-bottom: 20px;
+    }
+
+    #r-img {
+        float: right;
+        margin-left: 50px;
+        margin-bottom: 20px;
+    }
+
+    .wrapper {
+        width: 800px;
+        margin: 10px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+    }
+
+    .box {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    /* Do it! float 속성을 사용해 배치하기 */
+    #box11 {
+        float: left;
+        background: #ffd800;
+    }
+
+    #box12 {
+        float: right;
+        background: #0094ff;
+    }
+
+    hr {
+        clear: both;
+    }
+    p {
+            width: 500px;
+            height: 200px;
+            background-color: #eee;
+            border: 1px solid #ccc;
+            line-height: 2;
+        }
+
+        #static {
+            position: static;
+        }
+
+        #relative-1 {
+            position: relative;
+            background-color: aqua;
+        }
+
+        #relative-2 {
+            position: relative;
+            /* 포지셔닝 - relative */
+            left: 100px;
+            /* 왼쪽에서 100px 떨어지게 */
+            top: -50px;
+            /* 위쪽에서 -50px 떨어지게 (위로 이동) */
+        }
+
+        #relative-3 {
+            position: absolute;
+            /* 포지셔닝 - relative */
+        }
+
+        #fixed {
+            width: 100px;
+            height: 100px;
+            background-color: #222;
+            position: fixed;
+            /* 포지셔닝 - fixed */
+            right: 30px;
+            /* 오른쪽에서 30px 떨어지게 */
+            top: 30px;
+            /* 위쪽에서 30px 떨어지게 */
+        }
+		#container1 {
+			width:350px;
+            margin-left:100px ;
+            float: left;
+		}
+        #container2 {
+			width:350px;
+			margin-right:100px ;
+            float: right;
+
+		}
+        #bear{
+            border: 1px #222;
+            border-radius: 50%;
+            box-shadow: 5px 5px 30px 2px #333
+        }
+</style>
+
+<body>
+    <div id="margin1">
+        <h1>TEST</h1>
+    </div>
+
+    <div id="box1">1</div>
+    <div id="box2">2</div>
+    <div id="box3">3</div>
+    <hr>
+    <div id="button-div-center">
+        <button id="button1">버튼 1</button>
+        <button>버튼 2</button>
+    </div>
+    <hr>
+    <nav>
+        <ul>
+            <li><a href="#">메뉴 1</a></li>
+            <li><a href="#">메뉴 2</a></li>
+            <li><a href="#">메뉴 3</a></li>
+            <li><a href="#">메뉴 4</a></li>
+        </ul>
+    </nav>
+    <hr>
+
+    <p>Ex et adipisicing voluptate aliqua cupidatat nulla. Laboris est sint sit aliqua enim. Aute Lorem eu sint aute
+        sunt proident. Do culpa consectetur elit duis laboris reprehenderit incididunt nulla. Irure exercitation tempor
+        aliqua laboris cupidatat anim in non officia aliquip excepteur fugiat labore.</p>
+    <img id="l-img"
+        src="https://naverpa-phinf.pstatic.net/MjAyNTAzMTRfOTgg/MDAxNzQxOTE0MTgzODAx.m1C1eZH5AsSwdBPPY7HoZdMXy62ZlNZYj8ZN2bEiZbsg.BjCh_cysO46Kj79gJYsUivyCLzhqabJcrTUyM1tpXg4g.JPEG/342-228-2_17419141836289898039451394227283.jpg">
+
+    <img id="r-img"
+        src="https://naverpa-phinf.pstatic.net/MjAyNTAzMTRfOTgg/MDAxNzQxOTE0MTgzODAx.m1C1eZH5AsSwdBPPY7HoZdMXy62ZlNZYj8ZN2bEiZbsg.BjCh_cysO46Kj79gJYsUivyCLzhqabJcrTUyM1tpXg4g.JPEG/342-228-2_17419141836289898039451394227283.jpg">
+
+    <p>Lorem ipsum reprehenderit adipisicing exercitation enim velit veniam incididunt sit consectetur elit
+        exercitation. Commodo veniam sit quis nisi ea. Ipsum do aliqua nostrud laboris elit duis adipisicing id Lorem
+        qui. Labore dolor ipsum enim incididunt. Velit qui cillum sunt labore incididunt duis aute Lorem nulla et. Sint
+        commodo aute amet laboris ullamco exercitation Lorem dolore veniam ut reprehenderit incididunt. Laborum nulla
+        eiusmod cillum irure anim aute.</p>
+    <p>Excepteur voluptate ad irure ipsum duis. Deserunt cupidatat commodo proident eu mollit cillum commodo quis quis
+        et ad. Incididunt adipisicing enim laboris voluptate.</p>
+
+    <br><br>
+    <hr>
+
+    <div class="wrapper">
+        <div class="box" id="box11">박스1</div>
+        <div class="box" id="box12">박스2</div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, deserunt. Lorem ipsum dolor sit amet. Lorem
+            ipsum dolor sit amet.</p>
+    </div>
+
+    <p id="static">Ex et adipisicing voluptate aliqua cupidatat nulla. Laboris est sint sit aliqua enim. Aute Lorem eu
+        sint aute sunt proident. Do culpa consectetur elit duis laboris reprehenderit incididunt nulla. Pariatur fugiat
+        voluptate ea non amet cupidatat. </p>
+    <p id="relative-1">Lorem ipsum reprehenderit adipisicing exercitation enim velit veniam incididunt sit consectetur
+        elit exercitation. Magna Lorem excepteur occaecat cupidatat sunt proident tempor do nostrud labore cillum non
+        exercitation voluptate. </p>
+    <p id="relative-2">Excepteur voluptate ad irure ipsum duis. Deserunt cupidatat commodo proident eu mollit cillum
+        commodo quis quis et ad. Velit id duis enim reprehenderit eu dolor Lorem excepteur excepteur. </p>
+    <p id="relative-3">Excepteur voluptate ad irure ipsum duis. Deserunt cupidatat commodo proident eu mollit cillum
+        commodo quis quis et ad. Velit id duis enim reprehenderit eu dolor Lorem excepteur excepteur. </p>
+    <p id="fixed">sadasd</p>
+    <hr>
+    <div id="contents">
+        <h1>CSS3</h1>
+    </div>
+    <div id="container1">
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20120923_299%2Fstory7310_13484024057387gien_JPEG%2F4504780359_b29ab7f626_large.jpg&type=sc960_832" alt="곰인형 사진">
+    </div>
+    <div id="container2">
+        <img id="bear" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20120923_299%2Fstory7310_13484024057387gien_JPEG%2F4504780359_b29ab7f626_large.jpg&type=sc960_832" alt="곰인형 사진">
+    </div>    
+
+    <script>
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            display: inline-block;
+            /*div inline-block 로 선언하면 이렇게 됨.*/
+            margin: 15px;
+            border-style: solid;
+            /* 테두리 스타일 - 실선 */
+        }
+
+        .box1 {
+            border-width: 2px;
+            border-radius: 25px;
+        }
+
+        .box2 {
+            border-width: thick thin;
+            border-color: rgb(15, 35, 218);
+            border-left-color: red;
+
+        }
+
+        .box3 {
+            border-width: thick thin thin medium;
+        }
+
+        .box4 {
+            border-width: 10px 5px 5px 10px;
+            border-color: rgb(226, 98, 12);
+
+        }
+
+        /* Do it! 테두리 두께 지정하기 */
+        h1 {
+            padding-bottom: 5px;
+            border-bottom: 3px solid black;
+
+        }
+
+        p {
+            padding: 10px;
+            border-style: dotted;
+            border-color: blue;
+            border-radius: 20px;
+        }
+
+        .imgBox1 {
+            border-radius: 50px 10px;
+        }
+
+        .imgBox2 {
+            border-radius: 50%;
+        }
+
+        .imgBox3 {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 40px;
+            border-bottom-left-radius: 80%;
+            border-bottom-right-radius: 60px;
+        }
+
+        #tt {
+            margin: 30px black;
+        }
+
+        #margin1 {
+            margin: 30
+        }
+
+        #margin2 {
+            margin: 30px 50px;
+        }
+
+        #margin3 {
+            margin: 30px 10px 50px
+        }
+
+        #margin4 {
+            margin: 30px 10px 50px 30px
+        }
+
+        #unit1 {
+            font-size: 2%;
+        }
+
+        #unit2 {
+            font-size: 1em;
+        }
+
+        #unit3 {
+            font-size: 1rem;
+        }
+
+        #unit4 {
+            font-size: 1vw;
+        }
+
+        #unit5 {
+            font-size: 1vh;
+        }
+
+        #unit6 {
+            font-size: 1vmin;
+        }
+
+        #unit7 {
+            font-size: 1vmax;
+        }
+
+        #unit8 {
+            font-size: 1px;
+        }
+
+        #unit9 {
+            font-size: 1cm;
+        }
+
+        @media screen and (max-width: 700px) {
+            body {
+                background-color: yellow;
+            }
+        }
+
+        @media screen and (min-width: 1400px) {
+            body {
+                background-color: none;
+
+            }
+        }
+
+        @media screen and (min-width: 701px) and (max-width: 1399px) {
+            body {
+                background: url(https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxNzA1MTBfMjU2%2FMDAxNDk0MzgxMDE2MjEz.YouCvxHrFs5lWA_C1FX3sDKpcSOSQXbb8LnMwxZal88g.1lJzFQfxjG2HzK-8BerH877vYVOR7YXI1IOLJOHVAdgg.JPEG.aejoa33%2Fgb10_%25289%2529.jpg&type=sc960_832) fixed;
+                background-size: cover;
+                /* color: #fff; */
+            }
+        }
+
+        figure {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            width: 300px;
+        }
+
+        figcaption {
+            font-size: 14px;
+            color: gray;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is heading 1</h1>
+    <h2>This is heading 2</h2>
+    <p>This is a paragraph.</p>
+    <span id="unit1">This is another paragraph. 1%</span> <br>
+    <span id="unit2">This is another paragraph. 1em</span> <br>
+    <span id="unit3">This is another paragraph. 1rem</span> <br>
+    <span id="unit4">This is another paragraph. 1vw</span> <br>
+    <span id="unit5">This is another paragraph. 1vh</span> <br>
+    <span id="unit6">This is another paragraph. 1vmin</span> <br>
+    <span id="unit7">This is another paragraph. 1vmax</span> <br>
+    <span id="unit8">This is another paragraph. 1px</span> <br>
+    <span id="unit9">This is another paragraph. 1cm</span> <br>
+    <hr>
+    <div class="box1"> </div>
+    <div class="box2"> </div>
+    <div class="box3"> </div>
+    <div class="box4" id="tt"> </div>
+    <h1>박스모델</h1>
+    <p>박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 영역 사이의 여백인 패딩(padding), 박스의 테두리(border), 그리고 여러 박스 모델 간의 여백인 마진(margin) 등의 요소로 구성되어
+        있습니다. </p>
+    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR1C0XX0G2NSOp5mmXPK6gwcRaZdCdmm3AQopYkwtzWCqfsv_VN06S8YeJZKyT7CnEmqo286gVeCHSUI2T3h7Z3zA"
+        alt="고양이" width="300">
+    <img class="imgBox1"
+        src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR1C0XX0G2NSOp5mmXPK6gwcRaZdCdmm3AQopYkwtzWCqfsv_VN06S8YeJZKyT7CnEmqo286gVeCHSUI2T3h7Z3zA"
+        alt="고양이" width="300">
+    <img class="imgBox2"
+        src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR1C0XX0G2NSOp5mmXPK6gwcRaZdCdmm3AQopYkwtzWCqfsv_VN06S8YeJZKyT7CnEmqo286gVeCHSUI2T3h7Z3zA"
+        alt="고양이" width="300" height="300">
+    <img class="imgBox3"
+        src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR1C0XX0G2NSOp5mmXPK6gwcRaZdCdmm3AQopYkwtzWCqfsv_VN06S8YeJZKyT7CnEmqo286gVeCHSUI2T3h7Z3zA"
+        alt="고양이" width="300" height="300">
+    <hr>
+    <div id="margin1"></div>
+    <div id="margin2"></div>
+    <div id="margin3"></div>
+    <div id="margin4"></div>
+    <hr>
+    <figure>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <figcaption>테스트 피그캡션</figcaption>
+    </figure>
+    <hr>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/kTlv5_Bs8aw" title="BTS - Dynamite"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+    <hr>
+    <audio src="https://www.youtube.com/embed/kTlv5_Bs8aw" controls muted autoplay>TEST</audio>
+
+</body>
+
+</html>

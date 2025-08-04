@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p> <input type="text" id="num1"> + <input type="text" id="numm1"> = <input type="text" id="result0"></p>
+    <p> <input type="text" id="num2"> - <input type="text" id="numm2"> = <input type="text" id="result1"></p>
+    <p> <input type="text" id="num3"> * <input type="text" id="numm3"> = <input type="text" id="result2"></p>
+    <p> <input type="text" id="num4"> / <input type="text" id="numm4"> = <input type="text" id="result3"></p>
+    <p> <input type="text" id="num5"> % <input type="text" id="numm5"> = <input type="text" id="result4"></p>
+    <p> <input type="text" id="result5"> = ++<input type="text" id="num6"></p>
+    <p> <input type="text" id="result6"> = --<input type="text" id="num7"></p>
+    <p> <input type="text" id="result7"> = <input type="text" id="num8">++</p>
+    <p> <input type="text" id="result8"> = <input type="text" id="num9">--</p>
+    <hr>
+
+    <script>
+        let no1 = 4;
+        let no2 = 2;
+        let no3 = 5;
+        let no4 = 0;
+        let result = 0;
+        for (i = 0; i < 9; i++) {
+
+            switch (i) {
+                case 0:
+                    document.getElementById('num' + (i + 1)).value = no1;
+                    document.getElementById('numm' + (i + 1)).value = no2;
+                    result = no1 + no2;
+                    break;
+                case 1:
+                    document.getElementById('num' + (i + 1)).value = no1;
+                    document.getElementById('numm' + (i + 1)).value = no2;
+                    result = no1 - no2;
+                    break;
+
+                case 2:
+                    document.getElementById('num' + (i + 1)).value = no1;
+                    document.getElementById('numm' + (i + 1)).value = no2;
+                    result = no1 * no2;
+                    break;
+                case 3:
+                    document.getElementById('num' + (i + 1)).value = no1;
+                    document.getElementById('numm' + (i + 1)).value = no2;
+                    result = no1 / no2;
+                    break;
+                case 4:
+                    document.getElementById('num' + (i + 1)).value = no3;
+                    document.getElementById('numm' + (i + 1)).value = no2;
+                    result = no3 % no2;
+                    break;
+                case 5:
+                    document.getElementById('num' + (i + 1)).value = no1;
+                    result = ++no1;
+                    break;
+                case 6:
+                    document.getElementById('num' + (i + 1)).value = no1;
+                    result = --no1;
+                    break;
+                case 7:
+                    document.getElementById('num' + (i + 1)).value = no1;
+                    result = no1++;
+                    break;
+                case 8:
+                    document.getElementById('num' + (i + 1)).value = no1;
+                    result = no1--;
+                    break;
+
+
+                default:
+                    result = no1 + no2;
+
+            }
+            console.log(`${result}`);
+            document.getElementById('result' + i).value = result;
+        }
+
+    </script>
+</body>
+
+</html>

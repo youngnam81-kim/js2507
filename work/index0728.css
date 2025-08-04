@@ -1,0 +1,24 @@
+h1 {
+    color: #fff;
+    font-size: 120px;
+    /*
+    text-shadow: 2px 3px 0 #000;
+    */
+    text-shadow: 0 0 10px #00f, 0 0 20px #00f;
+    position: absolute;
+    right: 100px;
+    bottom: 10px;
+}
+
+#contents {
+    background: url("https://imgnews.pstatic.net/image/003/2024/09/22/NISI20240922_0020528856_web_20240922134209_20240922134324756.jpg?type=w860");
+    background-size: cover;
+    width: 1000px;
+    height: 600px;
+    margin: 0 auto; 
+    z-index: -1;
+    position: relative;
+    /*
+    position: relative;
+    */
+}
