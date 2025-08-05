@@ -1,187 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-    <meta charset="UTF-8">
-    
     <title>김영남의 HTML 과제방</title>
 
     <style>
-        a {
-            color: white;
-            text-decoration: none;
-        }
+      a {
+        color: white;
+        text-decoration: none;
+      }
 
-        .header{
-            display: flex;
-            flex-wrap: nowrap;
-            flex-direction: row;
-            height: 170px;
-        }
-        #logo {
-            min-width: 250px;
-            height: 170px;
-            background: #004225;
-            text-align: left;
-            font-size: 30px;
-            color: white;
-        }
+      .header {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        height: 170px;
+      }
+      #logo {
+        min-width: 250px;
+        height: 170px;
+        background: #004225;
+        text-align: left;
+        font-size: 30px;
+        color: white;
+      }
 
-        #logo-right {
-            height: 170px;
-            width: 100vw;
-            background: #004225 linear-gradient(to right, #004225, white);
-            text-align: left;
-            font-size: 30px;
-            color: white;
-        }
-        
-        .contentArea{
-            display: flex;
-            flex-wrap: nowrap;
-            flex-direction: row;
-            height: 79vh;
-        }
+      #logo-right {
+        height: 170px;
+        width: 100vw;
+        background: #004225 linear-gradient(to right, #004225, white);
+        text-align: left;
+        font-size: 30px;
+        color: white;
+      }
 
-        #nav{
-            background: #004225;
-            text-align: left;
-            font-size: 14px;
-            color: white;
-            width: 150px;
-            height: 79vh;
-            min-width: 150px;
-        }
+      .contentArea {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        height: 79vh;
+      }
 
-        .main{
-            text-align: left;
-            font-size: 14px;
-            color: white;
-            height: 79vh;
-            width: 100%;
-        }
+      #nav {
+        background: #004225;
+        text-align: left;
+        font-size: 14px;
+        color: white;
+        width: 150px;
+        height: 79vh;
+        min-width: 150px;
+      }
 
-        iframe {
-            width: 100%;
-            height: 79vh;
-            border: none;
-        }
+      .main {
+        text-align: left;
+        font-size: 14px;
+        color: white;
+        height: 79vh;
+        width: 100%;
+      }
 
-        [id^="day-"] {
-            display: none;
-        }
+      iframe {
+        width: 100%;
+        height: 79vh;
+        border: none;
+      }
+
+      [id^="day-"] {
+        display: none;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- 탑 시작 -->
     <div class="header">
-        <div id="logo"><br>
-            &nbsp;&nbsp;&nbsp; NaMi's Work<br><br><img src="./work/main-img/menu.png" onclick="menuClick()"> 
-            <!-- <ul>
+      <div id="logo">
+        <br />
+        &nbsp;&nbsp;&nbsp; NaMi's Work<br /><br /><img
+          src="./work/main-img/menu.png"
+          onclick="menuClick()"
+        />
+        <!-- <ul>
                 <li>html</li>
                 <li>javaScript</li>
                 <li>test</li>
             </ul> -->
-        </div>
-        <div id="logo-right"></div>
+      </div>
+      <div id="logo-right"></div>
     </div>
     <!-- 탑 끝-->
     <!-- 메뉴 시작 -->
     <div class="contentArea">
-        <div id="nav">
-            <div class="menu">
-                <div onclick='menuOnOff("day-0723")'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;5-Day 07-23</div>
-                <div id="day-0723">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./work/index0723.html"
-                        target="contentPage">07-23</a>
-                </div>
-                <div onclick='menuOnOff("day-0724")'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;6-Day 07-24</div>
-                <div id="day-0724">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./work/index0724.html"
-                        target="contentPage">07-24</a>
-                </div>
-                <div onclick='menuOnOff("day-0725")'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;7-Day 07-25</div>
-                <div id="day-0725">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./work/index0725.html"
-                        target="contentPage">07-25</a><br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./work/index0725_js.html"
-                        target="contentPage">07-25 js</a>
-                </div>
-                <div onclick='menuOnOff("day-0728")'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;8-Day 07-28</div>
-                <div id="day-0728">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./work/index0728.html"
-                        target="contentPage">07-28</a><br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./work/index0728_js.html"
-                        target="contentPage">07-28 js</a>
-                </div>
-                <div onclick='menuOnOff("day-0729")'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;9-Day 07-29</div>
-                <div id="day-0729">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./work/index0729.html"
-                        target="contentPage">07-29</a><br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./work/index0729_js.html"
-                        target="contentPage">07-29 js</a>
-                </div>
-                <div onclick='menuOnOff("day-0730")'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;10-Day 07-30</div>
-                <div id="day-0730">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./work/index0730.html"
-                        target="contentPage">07-30</a><br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./work/index0730_js.html"
-                        target="contentPage">07-30 js</a>
-                </div>
-                <div onclick='menuOnOff("day-0731")'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;11-Day 07-31</div>
-                <div id="day-0731">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./work/index0731_js.html"
-                        target="contentPage">07-31 js</a>
-                </div>
-                <div onclick='menuOnOff("day-0801")'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;12-Day 08-01</div>
-                <div id="day-0801">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./0801/fun.html"
-                        target="contentPage">08-01 js</a>
-                </div>
+      <div id="nav">
+        <div class="menu">
+          <div onclick='menuOnOff("day-0723")'>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;5-Day 07-23
+          </div>
+          <div id="day-0723">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a
+              href="./work/index0723.html"
+              target="contentPage"
+              >07-23</a
+            >
+          </div>
+          <div onclick='menuOnOff("day-0724")'>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;6-Day 07-24
+          </div>
+          <div id="day-0724">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a
+              href="./work/index0724.html"
+              target="contentPage"
+              >07-24</a
+            >
+          </div>
+          <div onclick='menuOnOff("day-0725")'>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;7-Day 07-25
+          </div>
+          <div id="day-0725">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a
+              href="./work/index0725.html"
+              target="contentPage"
+              >07-25</a
+            ><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a
+              href="./work/index0725_js.html"
+              target="contentPage"
+              >07-25 js</a
+            >
+          </div>
+          <div onclick='menuOnOff("day-0728")'>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;8-Day 07-28
+          </div>
+          <div id="day-0728">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a
+              href="./work/index0728.html"
+              target="contentPage"
+              >07-28</a
+            ><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a
+              href="./work/index0728_js.html"
+              target="contentPage"
+              >07-28 js</a
+            >
+          </div>
+          <div onclick='menuOnOff("day-0729")'>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;9-Day 07-29
+          </div>
+          <div id="day-0729">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a
+              href="./work/index0729.html"
+              target="contentPage"
+              >07-29</a
+            ><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a
+              href="./work/index0729_js.html"
+              target="contentPage"
+              >07-29 js</a
+            >
+          </div>
+          <div onclick='menuOnOff("day-0730")'>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;10-Day 07-30
+          </div>
+          <div id="day-0730">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a
+              href="./work/index0730.html"
+              target="contentPage"
+              >07-30</a
+            ><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a
+              href="./work/index0730_js.html"
+              target="contentPage"
+              >07-30 js</a
+            >
+          </div>
+          <div onclick='menuOnOff("day-0731")'>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;11-Day 07-31
+          </div>
+          <div id="day-0731">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a
+              href="./work/index0731_js.html"
+              target="contentPage"
+              >07-31 js</a
+            >
+          </div>
+          <div onclick='menuOnOff("day-0801")'>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;12-Day 08-01
+          </div>
+          <div id="day-0801">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a
+              href="./0801/fun.html"
+              target="contentPage"
+              >08-01 js</a
+            >
+          </div>
 
-                <div onclick='menuOnOff("day-0804")'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;13-Day 08-04</div>
-                <div id="day-0804">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a href="./0804/index0804.html"
-                        target="contentPage">08-04</a>
-                </div>
+          <div onclick='menuOnOff("day-0804")'>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;▶ &nbsp;&nbsp;13-Day 08-04
+          </div>
+          <div id="day-0804">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a
+              href="./0804/index0804.html"
+              target="contentPage"
+              >08-04</a
+            >
+          </div>
 
-            </div>
+          <div id="day-0805">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp;&nbsp;<a
+              href="./0805/index0805.html"
+              target="contentPage"
+              >08-05</a
+            >
+          </div>
         </div>
-        <!-- 메뉴 끝 -->
+      </div>
+      <!-- 메뉴 끝 -->
 
-        <!-- 메인 시작 -->
-        <div class="main">
-            <iframe name="contentPage" id="contentPage" src="./0804/index0804.html"></iframe> 
-        </div>
-        <!-- 메인 끝 -->
+      <!-- 메인 시작 -->
+      <div class="main">
+        <iframe
+          name="contentPage"
+          id="contentPage"
+          src="./0805/index0805.html"
+        ></iframe>
+      </div>
+      <!-- 메인 끝 -->
     </div>
 
     <footer>
-        <!-- 추후 footer -->
+      <!-- 추후 footer -->
     </footer>
 
     <script>
-        // 메뉴 컨트롤 시작
-        document.getElementById("nav").style.display = "none";
+      // 메뉴 컨트롤 시작
+      document.getElementById("nav").style.display = "none";
 
-        function menuClick() {
-            if (document.getElementById("nav").offsetWidth == 0) {
-                document.getElementById("nav").style.display = "flex";
-            } else {
-                document.getElementById("nav").style.display = "none";
-            }
+      function menuClick() {
+        if (document.getElementById("nav").offsetWidth == 0) {
+          document.getElementById("nav").style.display = "flex";
+        } else {
+          document.getElementById("nav").style.display = "none";
         }
-        function menuOnOff(menuName) {
-            if (document.getElementById(menuName).offsetHeight == 0) {
-                document.getElementById(menuName).style.display = "inline-block";
-            } else {
-                document.getElementById(menuName).style.display = "none";
-            }
-
+      }
+      function menuOnOff(menuName) {
+        if (document.getElementById(menuName).offsetHeight == 0) {
+          document.getElementById(menuName).style.display = "inline-block";
+        } else {
+          document.getElementById(menuName).style.display = "none";
         }
-        // 메뉴 컨트롤 끝
+      }
+      // 메뉴 컨트롤 끝
     </script>
-</body>
-
+  </body>
 </html>

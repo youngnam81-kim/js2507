@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    #myDiv1,
+    #myDiv2 {
+      background-color: coral;
+      padding: 50px;
+      width: 600px;
+    }
+
+    #myP1,
+    #myP2 {
+      background-color: white;
+      font-size: 20px;
+      border: 1px solid;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <form name="myForm1" action="https://www.w3schools.com/js/action_page.php" onsubmit="return validateForm()" method="get"> -->
+  <form name="myForm1" action="#" onsubmit="validateForm()" method="get">
+    Name: <input type="text" name="fname" required />
+    <input type="hidden" name="myNum1" value="1" />
+    <input type="hidden" name="myNum2" value="2" />
+    <input type="hidden" name="myNum3" value="3" />
+    <input type="submit" value="폼전송1" />
+  </form>
+  <hr />
+  1 에서 100 사이의 값을 입력하세요.
+  <input type="text" id="myNum" />
+  <input type="button" onclick="validateForm2()" value="숫자값입력" />
+  <hr />
+  <p id="b1">blue</p>
+  <p id="r1">red</p>
+  <p id="black">black</p>
+  <button onclick="chBtn()">클릭할때 변경됨</button>
+  <hr />
+  <h2 id="ooops" onclick="ooops(this)">Click on this text!</h2>
+  <hr />
+  <h2 id="changeT" onclick="changeTime(this)">
+    지금 시간을 알고 싶으면 글자를 눌러주세요.
+  </h2>
+  <hr />
+  <button id="myBtn">Try it</button>
+  <hr />
+  <h2>JavaScript addEventListener()</h2>
+
+  <div id="myDiv1">
+    <h2>Bubbling:버블링 에서는 가장 안쪽 요소의 이벤트를 먼저 처리하고 그 다음에 바깥쪽 요소를 처리합니다. </h2>
+    <p id="myP1">Click me!</p>
+  </div><br>
+
+  <div id="myDiv2">
+    <h2>Capturing:가장 바깥쪽 요소의 이벤트를 먼저 처리 하고 그 다음에 안쪽 요소의 이벤트를 처리합니다.</h2>
+    <p id="myP2">Click me!</p>
+  </div>
+  <hr>
+
+  <hr>
+  <p>Add a new HTML Element.</p>
+
+  <div id="div1">
+    <p id="p1">This is a paragraph.</p>
+    <p id="p2">This is another paragraph.</p>
+  </div>
+  <hr>
+
+  <script src="./js/index0805.js"></script>
+</body>
+
+</html>
