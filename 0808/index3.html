@@ -15,6 +15,34 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
-    <script type="text/babel"></script>
+    <div id="mydiv"></div>
+
+    <script type="text/babel">
+      function Hello() {
+        return <h1>안녕녕녕</h1>;
+      }
+      function Car() {
+        return <h1>안녕 나는 차야</h1>;
+      }
+      function Garage() {
+        return <h2>안녕 나는 차고야.</h2>;
+      }
+
+      const mydiv = document.getElementById("mydiv");
+      const rootMyDiv = ReactDOM.createRoot(mydiv);
+
+      const mycar = document.getElementById("mycar");
+      const rootCar = ReactDOM.createRoot(mycar);
+
+      const garage = document.getElementById("garage");
+      const root = ReactDOM.createRoot(myDiv);
+      root.render(
+        <>
+          <Hello />
+          <Car />
+          <Garage />
+        </>
+      );
+    </script>
   </body>
 </html>
