@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+      class Car {
+        constructor(brand) {
+          this.carName = brand;
+        }
+        present() {
+          return "나는 차있어." + this.carName;
+        }
+      }
+
+      class Model extends Car {
+        constructor(brand, mod) {
+          super(brand);
+          this.model = mod;
+        }
+        show() {
+          return this.present() + ", it is a " + this.model;
+        }
+      }
+
+      const myCar1 = new Model("포드", "머스탱");
+      const myCar2 = new Model("르노", "클리오");
+      const myCar3 = new Model("기아", "K7");
+      document.getElementById("demo1").innerHTML = myCar1.show();
+      document.getElementById("demo2").innerHTML = myCar2.show();
+      document.getElementById("demo3").innerHTML = myCar3.show();
+    </script>
+  </body>
+</html>
